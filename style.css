@@ -1,0 +1,116 @@
+:root{
+  --clr--primary--100: #fff;
+  --clr--primary--200: #F3EED9;
+  --clr--dark--900: #222C2A;
+  --clr--dark--400: #824936;
+
+  --ff--primary:'Roboto', sans-serif;
+  --ff--accent:'Playfair Display', serif;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p{
+  margin: 0;
+}
+  
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+}
+
+h1,h2,h3{
+  font-family: var(--ff--accent);
+  line-height: 1;
+  /* margin-bottom: 2rem; */
+}
+
+  /* -----------coloring the background & normal text--------- */
+.bg-light{
+  background-color: var(--clr--primary--200);
+}
+.bg-dark{
+  color: var(--clr--primary--100);
+  background-color: var(--clr--dark--900);
+}
+.bg-accent{
+  color: var(--clr--primary--100);
+  background-color: var(--clr--dark--400);
+}
+
+  /* --------------coloring the accent text--------------- */
+h1,h2{
+  color: var(--clr--dark--400);
+}
+  .bg-dark h2,
+.bg-accent h2{
+  color: var(--clr--primary--200);
+}
+
+  /* -----------------------Padding---------------------- */
+header{
+  padding: 3rem 0;
+}
+section{
+  padding: 3rem 0;
+}
+
+  /* -----------------------Centering---------------------- */
+.text-center{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* header h1{
+  width: min(90%, 34rem);
+  margin-inline: auto;
+} */
+header h1{
+  max-width: 34rem;
+  margin-inline: auto;
+}
+.container{
+  margin-inline: auto;
+  width: min(90%, 70.5rem );
+}
+
+img{
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+
+
+
+
+
+  /* -----------------------Flexbox---------------------- */
+.split{
+  display: flex;
+  flex-direction: row;
+}
+.split>*{
+  flex-basis: 100%;
+}
+.split>* + *{
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .split{
+    flex-direction: column;
+  }
+  .split>* + *{
+    margin-left: 0rem;
+  }
+  }
